@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+# Pomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### projeto que tem como objetivo melhorar a produtividade, de pois com baixa comcentracão utilizando um conceito chamado Pomodoro!
 
-Currently, two official plugins are available:
+⏱️ Conceito Pomodoro
+O Pomodoro é uma técnica de gestão de tempo que consiste em dividir o trabalho em blocos de 25 minutos de foco total, seguidos por 5 minutos de pausa. Após quatro ciclos, é recomendada uma pausa maior de 15 a 30 minutos. Essa abordagem ajuda a melhorar a concentração, reduzir a fadiga mental e aumentar a produtividade.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Principais Aprendizados: 
+-> conceitos de useEffect
+-> conceitos de useReducer
+-> conceitos de estados globais - useContext 
+-> conceitos de estados locais - useState
+-> conceitos de useEffect 
+-> conceitos de imutabilidade, com useState & IMMER 
+-> Roteamento de paginas
+-> tipagem de dados
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🛠️ Requisitos
+ Antes de começar, certifique-se de ter instalado:
+> Node.js (v18 ou superior recomendado)
+> PNPM (versão 10.5.2 ou superior)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+🚧 Tecnologias Usadas
+> React 19
+> TypeScript
+> Vite
+> React Hook Form + Zod
+> Styled Components
+> Immer
+> React Router v7
+> Phosphor Icons
+> ESLint + Rocketseat Config
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🧩 Mockups
+<br/>
+<img src="https://github.com/user-attachments/assets/57b0bcee-af6d-4a88-bafa-df9f03a2eee8" width="450"/>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
